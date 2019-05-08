@@ -75,9 +75,15 @@ module.exports = {
       options: {
         fieldName: 'released',
         fieldNameNotForced: 'releasedNotForced',
-        force: true,
+        force: process.env.NODE_ENV === development,
       },
     },
   ],
 }
 ```
+
+`fieldName` and `fieldNameNotForced`
+Use to overried the default field name.
+
+`force`
+In case you want to display posts in development mode you can use `force` option.
