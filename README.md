@@ -2,7 +2,7 @@ A plugin that let you exclide posts from production.
 
 ## How to use
 
-1. Add plugin to `gatsby-node.js`
+### 1. Add plugin to `gatsby-node.js`
 
 ```javascript
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
 }
 ```
 
-2. Update your GraphQL queries
+### 2. Update your GraphQL queries
 
 You may want to exclude drafts from a build step in file `gatsby-node.js` and respect the `released` value from blog pages such as `index.js.`
 
@@ -40,7 +40,7 @@ const query = graphql(
 )
 ```
 
-3. Update your component code
+### 3. Update your component code
 
 This step is totally up to yours component tree. The key point is to request necessary fields via GraphQL query.
 
