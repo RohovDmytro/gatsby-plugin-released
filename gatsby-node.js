@@ -6,8 +6,8 @@ const getValue = ({ node, options }) => {
     return false
   }
 
-  if (node.frontmatter[fieldName] === true) {
-    return true
+  if (node.frontmatter.hasOwnProperty(fieldName)) {
+    return node.frontmatter[fieldName]
   }
 
   if (!node.frontmatter.date) {
