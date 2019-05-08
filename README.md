@@ -1,3 +1,5 @@
+A plugin that let you exclide posts from production.
+
 ## How to use
 
 1. Add plugin to `gatsby-node.js`
