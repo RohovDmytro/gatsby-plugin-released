@@ -21,13 +21,14 @@ const getValue = ({ node, options }) => {
   return value
 }
 
-exports.onCreateNode = ({ node, actions }) => {
+exports.onCreateNode = ({ node, actions }, optionsFromConfig) => {
   const MD_TYPE = 'MarkdownRemark'
   const options = {
     fieldName: 'released',
     fieldNameNotForced: 'releasedNotForced',
     timezone: 'UTC',
-    force: process.env.NODE_ENV === 'development',
+    force: false,
+    ...optionsFromConfig,
   }
   const { createNodeField } = actions
   const { fieldName, fieldNameNotForced } = options
