@@ -1,5 +1,9 @@
 A plugin that let you exclide posts from production.
 
+## How it works
+
+This plugin add a new field called `released`. If your build happens before `date` of your post the `released` value will set to `false`.
+
 ## How to use
 
 ### 1. Add plugin to `gatsby-node.js`
@@ -75,6 +79,7 @@ module.exports = {
       options: {
         fieldName: 'released',
         fieldNameNotForced: 'releasedNotForced',
+        timezone: 'UTC',
         force: process.env.NODE_ENV === development,
       },
     },
@@ -82,8 +87,14 @@ module.exports = {
 }
 ```
 
-`fieldName` and `fieldNameNotForced`
+### `fieldName` and `fieldNameNotForced`
+
 Use to overried the default field name.
 
-`force`
+### `force`
+
 In case you want to display posts in development mode you can use `force` option.
+
+### `timezone`
+
+Set another timezone that will be respected at build time to calculate `released` value.
