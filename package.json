@@ -1,6 +1,7 @@
 {
   "name": "gatsby-plugin-released",
   "version": "0.2.2",
+  "repository": "rg4real/gatsby-plugin-released",
   "license": "MIT",
   "dependencies": {}
 }
