@@ -49,24 +49,24 @@ const query = graphql(
 This step is totally up to yours component tree. The key point is to request necessary fields via GraphQL query.
 
 ```javascript
-    const query = graphql`
-      query {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          filter: { fields: { released: { eq: true } } }
-        ) {
-          edges {
-            node {
-              id
-              fields {
-                slug
-    						released
-    		        releasedNotForced
-              }
-            }
+const query = graphql`
+  query {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { released: { eq: true } } }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+            released
+            releasedNotForced
           }
         }
       }
+    }
+  }
 ```
 
 ## Options
