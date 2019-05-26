@@ -1,4 +1,4 @@
-A plugin that let you exclide posts from production.
+A plugin that lets you mark posts and drafts and automatically exclude them from production.
 
 ## How it works
 
@@ -6,7 +6,7 @@ This plugin add a new field called `released`. If your build happens before `dat
 
 ## How to use
 
-### 1. Add plugin to `gatsby-node.js`
+### Add plugin to `gatsby-node.js`
 
 ```javascript
 module.exports = {
@@ -14,12 +14,12 @@ module.exports = {
     /*
         ...
     */
-    'gatsby-plugin-released',
-  ],
-}
+    'gatsby-plugin-released'
+  ]
+};
 ```
 
-### 2. Update your GraphQL queries
+### Update your GraphQL queries
 
 You may want to exclude drafts from a build step in file `gatsby-node.js` and respect the `released` value from blog pages such as `index.js.`
 
@@ -41,10 +41,10 @@ const query = graphql(
       }
     }
   `
-)
+);
 ```
 
-### 3. Update your component code
+### Update your component code
 
 This step is totally up to yours component tree. The key point is to request necessary fields via GraphQL query.
 
@@ -80,11 +80,11 @@ module.exports = {
         fieldName: 'released',
         fieldNameNotForced: 'releasedNotForced',
         timezone: 'UTC',
-        force: process.env.NODE_ENV === development,
-      },
-    },
-  ],
-}
+        force: process.env.NODE_ENV === development
+      }
+    }
+  ]
+};
 ```
 
 ### `fieldName` and `fieldNameNotForced`
