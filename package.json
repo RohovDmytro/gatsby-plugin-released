@@ -1,7 +1,21 @@
 {
   "name": "gatsby-plugin-released",
   "version": "0.2.2",
+  "main": "index.js",
   "repository": "rg4real/gatsby-plugin-released",
   "license": "MIT",
-  "dependencies": {}
+  "scripts": {
+    "np": "np && git push"
+  },
+  "dependencies": {
+    "moment-timezone": "^0.5.25"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "drafts"
+  ],
+  "devDependencies": {
+    "np": "^5.0.2"
+  }
 }
