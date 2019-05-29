@@ -2,7 +2,7 @@ A plugin that lets you mark posts and drafts and automatically exclude them from
 
 ## How it works
 
-This plugin add a new field called `released`. If your build happens before `date` of your post the `released` value will set to `false`.
+This plugin add a new field called `released` to `markdown` and `mdx` nodes. If your build happens before `date` of your post the `released` value will set to `false`.
 
 ## How to use
 
